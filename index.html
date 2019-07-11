@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<title>DEFI</title>
+<link rel="shortcut icon" mce_href="images/favicon.ico" href="images/favicon.ico" type="img/x-icon">
+<link rel="stylesheet" href="css/style.css?v=1.0163">
+</head>
+<body>
+    <div class="loading"></div>
+	<div id="app">
+		<div class="header">
+			<p class="title">DeFi<span class="login_out" onclick="scatterLogout()">Login Out</span></p>
+			<div class="head">
+				<div class="left">
+					<img src="images/logo.png" alt="">
+					<p><span onclick="scatterLogin()" class="login">Login</span><b></b></p>
+				</div>
+				<div class="right">
+					<select name="" id="language" class="language">
+						<option value="0">English</option>
+						<option value="1">Chinese</option>
+					</select>
+					<div class="select">
+						<select name="" id="eType" class="type">
+							<option value="1" selected="">EOS</option>
+							<!-- <option value="2">ETH</option> -->
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<p class="bi"><span class="eosbi" data-eos='0'></span><span class="pdrbi"></span></p>
+			<div class="timeout">
+				<p class="title">Countdown to the end of the activity</p>
+				<p><span>Flash</span> sale...</p>
+				<div class="chi_box">
+					<div class="chi"></div>
+					<div class="lang">
+						<p class="text">
+							<b><span>Remaining</span><br><span>ATHENA</span></b><br>
+							<span></span>
+						</p>
+						<div class="bl"></div>
+						<div class="qp"></div>
+						<div class="qp qp1"></div>
+						<div class="qp qp2"></div>
+						<div class="qp qp3"></div>
+					</div>
+				</div>
+				<div class="time">
+					<p class="day"></p>
+					<p class="hour"></p>
+					<p class="minute"></p>
+					<p class="second"></p>
+				</div>
+			</div>
+			<div class="menu">
+				<a class="active">DIF</a>
+				<a>TRANSFER</a>
+			</div>
+			<div class="from">
+				<p>From:</p>
+				<div class="t">
+					<a></a>
+					<p class="from_type">EOS</p>
+					<input type="number" min="0" id="dh" maxlength="6" placeholder="0">
+				</div>
+			</div>
+			<div class="hs"></div>
+			<div class="from to">
+				<p>To:</p>
+				<div class="t">
+					<a></a>
+					<select name="" id="currencyDictionary">
+						<option value="0">ATHENA</option>
+					</select>
+					<input type="number" id="result" readonly="" placeholder="0">
+				</div>
+			</div>
+			<p class="result">1 EOS = <span></span> ATHENA <b></b></p>
+			<p class="etip"></p>
+			<div class="state hidden">
+				<ul>
+					<li class="down">
+						LEND<br><span>0.000045659%</span>
+					</li>
+					<li>
+						LEND<br><span>0.000045659%</span>
+					</li>
+					<li>
+						LEND<br><span>0.000045659%</span>
+					</li>
+				</ul>
+				<div class="clear"></div>
+				<a class="more">More ></a>
+				<div class="clear"></div>
+			</div>
+			<button class="dif">DIF NOW</button>
+			<div class="center_list">
+				<ul>
+					<li><p>Business<br>cooperation</p></li>
+					<a href="https://bloks.io/account/athenaexpect"><li><p>Contract<br>account</p></li></a>
+					<a><li><p>Block<br>browsing</p></li></a>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="pro">
+				<div class="title">
+					<!-- <div class="select">
+						<select name="" id="dif">
+						</select>
+					</div> -->
+					<span>DIF Total Progress</span>
+					<div class="clear"></div>
+				</div>
+				<ul id="diffraction">
+					<li><b>Contract pool:</b><span></span></li>
+					<li><b>Has DIF(diffraction):</b><span></span></li>
+					<li><b>Remaining DIF(diffraction):</b><span></span></li>
+					<li><b>Current exchange ratio:</b><span></span></li>
+					<li><b>DIF Threshold:</b><span></span></li>
+					<li><b>Transaction EOS:</b><span></span></li>
+				</ul>
+				<div class="pre">
+					<p class="title">DIF Diffraction Stage</p>
+					<div class="dif1 dif0">
+						<p>DIF-<span></span>（<b>1：25.0</b>）<span class="state">processing</span></p>
+						<div class="scroll_box">
+							<div class="scroll_d scroll_d1"></div>
+						</div>
+						<div class="dtext">
+							<span><span>Starting block ht:</span><br><b></b></span>
+							<span><span>End block ht:</span><br><b></b></span>
+							<span><span>Current block ht:</span><br><b></b></span>
+						</div>
+					</div>
+					<div class="dif1 dif2">
+						<p>DIF-<span></span>（<b>1：25.0</b>）<span></span></p>
+						<div class="scroll_box">
+							<div class="scroll_d"></div>
+						</div>
+						<div class="dtext">
+							<span><span>Starting block ht:</span><br><b></b></span>
+							<span><span>End block ht:</span><br><b></b></span>
+							<span class="hidden"><span>Current block ht:</span><br><b></b></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="js/tp.js?v1.0"></script>
+<script src="js/buffer.js"></script>
+<script src="js/eos.min.js"></script>
+<script src="js/mDialogMin.js"></script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script src="js/scatterjs-core.min.js"></script>
+<script src="js/scatterjs-plugin-eosjs.min.js"></script>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/angle.js?v=1.1877"></script>
+<script src="js/index.js?v=1.73244"></script>
+</html>
